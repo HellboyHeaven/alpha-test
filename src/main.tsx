@@ -1,19 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage.tsx'
-import ProductPage from './pages/ProductPage.tsx'
-import CreatePage from './pages/CreatePage.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { BrowserRouter, HashRouter } from "react-router-dom";
+import App from "./App.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/alpha-test">
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/products/:id" element={<ProductPage />} />
-      <Route path="/create-product" element={<CreatePage />} />
-    </Routes>
-  </BrowserRouter>
-  </StrictMode>,
-)
+    <HashRouter basename={import.meta.env.BASE_URL}>
+      <App />
+    </HashRouter>
+  </StrictMode>
+);

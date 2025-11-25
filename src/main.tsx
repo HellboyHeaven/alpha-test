@@ -8,7 +8,7 @@ import CreatePage from './pages/CreatePage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/alpha-test">
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/products/:id" element={<ProductPage />} />

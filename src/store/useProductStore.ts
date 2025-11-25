@@ -17,7 +17,7 @@ interface Store {
   setCategoryFilter: (category: string) => void;
 }
 
-export const useProductStore = create<Store>((set, get) => ({
+export const useProductStore = create<Store>((set, _) => ({
   products: [],
   likedIds: new Set<number>(),
   currentPage: 1,

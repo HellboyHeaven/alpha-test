@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import CreateProduct from "../components/CreateProductForm";
 import CreateProductForm from "../components/CreateProductForm";
 
 export default function CreatePage() {

@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
   const [filter, setFilter] = useState<'all' | 'liked'>('all');
-  const [selectedId, setSelectedId] = useState<number | null>(null);
   const {products, setProducts} = useProductStore();
   
   const nav = useNavigate();
@@ -21,10 +20,7 @@ export default function HomePage() {
     
   }, []);
 
-  const handleCardClick = (id: number) => {
-    setSelectedId(id);
-    
-  };
+  
   if (products.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">

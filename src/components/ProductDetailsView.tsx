@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { ArrowLeft, Heart } from "lucide-react";
+import { useState } from "react";
+import { Heart } from "lucide-react";
 import { useProductStore } from "../store/useProductStore";
 import EditProductForm from "./EditProductForm";
 
@@ -9,7 +9,7 @@ type Props = {
 
 export default function ProductDetailsView({ id }: Props) {
   const {
-    products, likedIds, toggleLike, updateProduct
+    products, likedIds, toggleLike
   } = useProductStore();
 
   const [isEditing, setIsEditing] = useState(false);

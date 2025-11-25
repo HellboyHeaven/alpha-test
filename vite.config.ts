@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "https://HellboyHeaven.github.io/alpha-test",
+  base: "/alpha-test",
   plugins: [
     react({
       babel: {
